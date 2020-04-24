@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <script>
+        function computerPlay(list) {
+        return list[Math.floor(Math.random()*list.length)];
+        }
+        //computerPlay(['rock', 'paper', 'scissors']); 
+       
+        function playRound(){ 
+            let playerSelection = prompt("Make your choice");
+            computerSelection = computerPlay(['rock', 'paper', 'scissors']); 
+            if (playerSelection == 'rock' && computerSelection == 'rock') {
+                 console.log("Rock tie!")
+                 console.log('Player ' + counterPlayer + ' Computer ' + counterComputer)
+            }
+            if (playerSelection == 'rock' && computerSelection == 'paper') {
+                console.log("Computer wins! Paper beats rock.")
+                counterComputer++
+                console.log('Player ' + counterPlayer + ' Computer ' + counterComputer)
+            }
+            if (playerSelection == 'rock' && computerSelection == 'scissors') {
+                console.log("Player wins! Rock beats scissors.")
+                counterPlayer++
+                console.log('Player ' + counterPlayer + ' Computer ' + counterComputer)
+            }
+            if (playerSelection == 'paper' && computerSelection == 'rock') {
+                console.log("Player wins! Paper beats rock.")
+                counterPlayer++
+                console.log('Player ' + counterPlayer + ' Computer ' + counterComputer)
+            }
+            if (playerSelection == 'paper' && computerSelection == 'paper') {
+                console.log("Paper tie!")
+                console.log('Player ' + counterPlayer + ' Computer ' + counterComputer)
+            }
+            if (playerSelection == 'paper' && computerSelection == 'scissors') {
+                console.log("Computer wins! Scissors beats paper.")
+                counterComputer++
+                console.log('Player ' + counterPlayer + ' Computer ' + counterComputer)
+            }
+            if (playerSelection == 'scissors' && computerSelection == 'rock') {
+                console.log("Computer wins! Rock beats scissors")
+                counterComputer++
+                console.log('Player ' + counterPlayer + ' Computer ' + counterComputer)
+            }
+            if (playerSelection == 'scissors' && computerSelection == 'paper') {
+                console.log("Player wins! Scissors beats paper.")
+                counterPlayer++
+                console.log('Player ' + counterPlayer + ' Computer ' + counterComputer)
+            }
+            if (playerSelection == 'scissors' && computerSelection == 'scissors') {
+                console.log("Scissors tie!")
+                console.log('Player ' + counterPlayer + ' Computer ' + counterComputer)
+            }
+        }
+        function game() {
+            counterPlayer = 0;
+            counterComputer = 0;
+            playRound();
+            playRound();
+            playRound();
+            playRound();
+            playRound();
+            if(counterPlayer>counterComputer) {
+                return "Player has won!"
+            } else if(counterPlayer<counterComputer) {
+                return "Computer has won!"
+            } else {
+                return "Tie!"
+             }
+        }
+        
+        
+        
+    </script>
+
+</body>
+</html>

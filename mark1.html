@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <script>
+        function computerPlay(list) {
+        return list[Math.floor(Math.random()*list.length)];
+        }
+        //computerPlay(['rock', 'paper', 'scissors']); 
+        function playRound(playerSelection, computerSelection){
+            if (playerSelection == rock && computerSelection == rock) {
+                 "Tie!"
+            }
+            if (playerSelection == rock && computerSelection == paper) {
+                 "Computer wins! Paper beats rock."
+            }
+            if (playerSelection == rock && computerSelection == scissors) {
+                 "Player wins! Rock beats scissors."
+            }
+            if (playerSelection == paper && computerSelection == rock) {
+                 "Player wins! Paper beats rock."
+            }
+            if (playerSelection == paper && computerSelection == paper) {
+                 "Tie!"
+            }
+            if (playerSelection == paper && computerSelection == scissors) {
+                "Computer wins! Scissors beats paper."
+            }
+            if (playerSelection == scissors && computerSelection == rock) {
+                "Computer wins! Rock beats scissors"
+            }
+            if (playerSelection == scissors && computerSelection == paper) {
+                "Player wins! Scissors beats paper."
+            }
+            if (playerSelection == scissors && computerSelection == scissors) {
+                "Tie!"
+            }
+            
+        }
+
+    </script>
+
+</body>
